@@ -1,0 +1,448 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #FFFFFF; 
+    --secondary-text-color: #FF69B4; 
+    --accent-color: #FF1493; 
+    --background-color: #000000; 
+    --card-background-color: #1E1E1E;
+    --hover-background-color: #2C2C2C;
+    --border-color: #FF69B4; 
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+    background-color: var(--background-color);
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+ul {
+    list-style: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}.latest-news {
+    position: relative;
+    padding: 60px 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px var(--card-background-color);
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    height: 400px; 
+}
+
+.latest-news::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.818); 
+    z-index: 1;
+}
+
+.latest-news-content {
+    z-index: 2;
+    color: white; 
+}
+
+.latest-news-text {
+    max-width: 600px;
+}
+
+.latest-news-text h2 {
+    margin-bottom: 15px;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.latest-news-text p {
+    font-size: 30px;
+    line-height: 1.6;
+    font-weight: bolder;
+    color: #eb56a5;
+}
+
+
+
+
+.container {
+    max-width: 2000px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+.bottom{
+    margin: 60px;
+}
+nav {
+    background-color: var(--background-color);
+    box-shadow: 0 0 4px var(--card-background-color);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 110px;
+    background-color: rgb(31, 30, 30);
+}
+.main-nav.container.flex{
+    margin: 0;
+    padding: 0;
+}
+.company-logo img {
+    width: 130px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.nav-links {
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links ul {
+    display: flex;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+}
+
+.hover-link {
+    cursor: pointer;
+    color: var(--primary-text-color);
+}
+
+.hover-link:hover {
+    color: var(--accent-color);
+}
+
+.hover-link:active {
+    color: var(--secondary-text-color);
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    height: 32px;
+    gap: 8px;
+    margin-left: 20px;
+    margin-right: 40px;
+}
+
+.news-input {
+    font-size: 16px;
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    border: none;
+    font-size: 15px;
+}
+#search-button{
+    margin-top: 0;
+}
+.search-button:hover {
+    background-color: var(--secondary-text-color);
+}
+
+main {
+    padding-block: 20px;
+    margin-top: 20px;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+    width: 100%;
+}
+.card {
+    width: 360px;
+    height: 450px; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); 
+    border-radius: 12px; 
+    overflow: hidden;
+    cursor: pointer;
+    background-color: var(--card-background-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--primary-text-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-10px); 
+    background-color: var(--hover-background-color);
+}
+
+.card-header {
+    width: 100%;
+    height: 200px; 
+    overflow: hidden;
+    border-bottom: 4px solid var(--accent-color); 
+}
+
+.card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .card-header img {
+    transform: scale(1.1); 
+}
+
+.card-content {
+    padding: 20px; 
+    flex-grow: 1;
+}
+
+.news-title {
+    font-size: 22px; 
+    font-weight: bold;
+    color: var(--secondary-text-color);
+    margin-bottom: 12px;
+}
+
+.news-source {
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var(--secondary-text-color);
+}
+
+.news-desc {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--primary-text-color);
+}
+
+
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        height: auto;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .company-logo img {
+        width: 80px;
+    }
+
+    .search-bar {
+        width: 100%;
+        gap: 4px;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .news-input, .search-button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .main-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .company-logo img {
+        width: 60px;
+    }
+
+    .search-bar {
+        width: 100%;
+        gap: 4px;
+    }
+
+    .news-input, .search-button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .cards-container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+}
+footer {
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
+    padding: 20px;
+    box-shadow: 0 -2px 4px var(--card-background-color);
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-sections {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1500px; 
+    margin: 0 auto;
+}
+
+.footer-sections div {
+    flex: 1;
+}
+
+.footer-sections h4 {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+.footer-sections a {
+    color: var(--secondary-text-color);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.footer-sections a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--secondary-text-color);
+}
+
+.footer-bottom a {
+    color: var(--accent-color);
+}
+
+.footer-bottom a:hover {
+    color: var(--primary-text-color);
+}
+
+.subscribe, .recent, .follow-us {
+    max-width: 300px; 
+}
+
+.subscribe {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.recent {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.follow-us {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+input[type="email"] {
+    padding: 8px;
+    border-radius: 4px;
+    border: 2px solid var(--border-color);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 10px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: var(--secondary-text-color);
+}
