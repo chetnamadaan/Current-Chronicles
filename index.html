@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Chronicles</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="main-nav container flex">
+            <a href="#" onclick="reload()" class="company-logo">
+                <img src="imgs/Current chronicles.png" alt="company logo">
+            </a> 
+            <div class="nav-links">
+                <ul class="flex">
+                    <li class="hover-link nav-item" id="ipl" onclick="onNavItemClick('sports')">Sports</li>
+                    <li class="hover-link nav-item" id="finance" onclick="onNavItemClick('finance')">Finance</li>
+                    <li class="hover-link nav-item" id="politics" onclick="onNavItemClick('politics')">Politics</li>
+                </ul>
+            </div>
+            <div class="search-bar flex">
+                <input id="search-text" type="text" class="news-input" placeholder="e.g. Science">
+                <button id="search-button" class="search-button">Search</button>
+            </div>
+        </div> 
+    </nav>  
+    <div class="bottom">
+        <section class="latest-news container" style="background-image: url('imgs/breaking-news-daily-newspaper-headline-CTG496\ \(1\).jpg');">
+            <div class="latest-news-content flex">
+                <div class="latest-news-text">
+                    <h2>Latest News</h2>
+                    <p>Stay updated with the most recent and trending news. Don’t miss out on the latest headlines and stories. Our coverage includes major events, insightful articles, and exclusive interviews.</p>
+                </div>
+            </div>
+        </section>
+    
+    <main>
+        <div class="cards-container container flex" id="cards-container"></div>
+    </main>
+    <template id="template-news-card">
+        <div class="card">
+            <div class="card-header">
+                <img src="https://via.placeholder.com/400x200" alt="news-img" id="news-img">
+            </div>
+            <div class="card-content">
+                <h3 id="news-title">This is the Title</h3>
+                <h6 class="news-source" id="news-source">End Gadget 26/07/2024</h6>
+                <div class="news-desc" id="news-desc">Lorem ipsum dolor sit amet, harum velit, dolorum porro quas amet recusandae dignissimos sit excepturi, ab sunt veritatis beatae explicabo, eos odio.</div>
+            </div>
+        </div>
+    </template>
+</div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-sections">
+                <div class="subscribe">
+                    <h4>Subscribe</h4>
+                    <p>Get the latest updates directly to your inbox.</p>
+                    <input type="email" placeholder="Your email" style="padding: 8px; border-radius: 4px; border: 2px solid var(--border-color); width: 100%; box-sizing: border-box;">
+                    <button style="background-color: var(--accent-color); color: white; padding: 8px 16px; border: none; border-radius: 4px; cursor: pointer; font-family: 'Roboto', sans-serif; margin-top: 10px; width: 100%;">Subscribe</button>
+                </div>
+                <div class="recent">
+                    <h4>Recent Articles</h4>
+                    <a href="#">Breaking News: Major Event Today</a>
+                    <a href="#">Insights: Latest Trends in Technology</a>
+                    <a href="#">Exclusive: Interview with a Celebrity</a>
+                </div>
+                <div class="follow-us">
+                    <h4>Follow Us</h4>
+                    <a href="#" class="social-icon"><i class="fab fa-twitter"></i> Twitter</a>
+                    <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i> Facebook</a>
+                    <a href="#" class="social-icon"><i class="fab fa-instagram"></i> Instagram</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Current Chronicles. All rights reserved.</p>
+                <p>Designed by <a href="#">Chetna Madaan</a></p>
+            </div>
+        </div>
+    </footer>
+        <script src="script.js"></script>
+
+</body>
+</html>
